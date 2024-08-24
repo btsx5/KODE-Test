@@ -8,6 +8,7 @@ int main() {
 	setlocale(LC_ALL, "Rus");
 	RUN_TEST(TestObjectManager);
 	ObjectManager objectManager;
+	//objectManager.LoadFromJSON();
 	objectManager.LoadObjects();
 	std::string command;
 	while (true) {

@@ -12,6 +12,7 @@
 #include <optional>
 #include <iomanip>
 #include "constants.h"
+#include "json.h"
 
 struct Object {
 	std::string name_; // имя объекта
@@ -38,8 +39,9 @@ public:
 	const std::map<std::string, std::vector<Object>> GroupByDistance(double x, double y);
 	const std::map<std::string, std::vector<Object>> GroupByDistance();
 	void LoadObjects();
+	void LoadFromJSON();
 	void MakeOutputFile(const std::map<std::string, std::vector<Object>>& objects);
-
+	
 private:
 	std::vector<Object> objects_;
 	double CalculateDistance(double x1, double y1, double x2, double y2);

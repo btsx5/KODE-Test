@@ -1,0 +1,23 @@
+[
+    {
+        "name": "ABOBA",
+        "x": -37.23,
+        "y": 13.44,
+        "type": "HUMAN",
+        "timeStamp": 1716376150.98678
+    },
+    {
+        "name": "GROCERY",
+        "x": 0.163,
+        "y": 2.119,
+        "type": "BUILDING",
+        "timeStamp": 1724324950.173
+    }, 
+    {
+        "name": "CAFE",
+        "x": 0.163,
+        "y": 2.119,
+        "type": "BUILDING",
+        "timeStamp": 1724324950.173
+    }
+]

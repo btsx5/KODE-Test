@@ -139,6 +139,32 @@ void ObjectManager::LoadObjects() {
 	ProcessObjects(file);
 	file.close();
 }
+void ObjectManager::LoadFromJSON() {
+	std::ifstream input("..\\..\\..\\input.json");
+	json::Array data_arr = json::Load(input).GetRoot().AsArray();
+	for (const auto& data_map : data_arr) {
+		Object new_object;
+		for (const auto& [key, value] : data_map.AsDict()) {
+			if (key == "name") {
+				new_object.name_ = value.AsString();
+			}
+			else if (key == "type") {
+				new_object.type_ = value.AsString();
+			}
+			else if (key == "x") {
+				new_object.x_ = value.AsDouble();
+			}
+			else if (key == "y") {
+				new_object.y_ = value.AsDouble();
+			}
+			else if (key == "timeStamp") {
+				new_object.timeStamp_ = value.AsDouble();
+			}
+		}
+		objects_.push_back(new_object);
+	}
+
+}
 void ObjectManager::MakeOutputFile(const std::map<std::string, std::vector<Object>>& objects) {
 	std::cout << "ֲגוהטעו טלÿ פאיכא גûגמהא:" << std::endl;
 	std::string filename;
