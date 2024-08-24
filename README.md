@@ -1,1 +1,2 @@
-# KODE Test
+# KODE Test.
+TODO LIST . ADD JSON SUPPORT
